@@ -32,7 +32,7 @@ mi_variable_texto_apellido = "Mendez" #automaticamente imprime los dos textos de
 print("Cadena de texto:", mi_variable_texto_nombre, mi_variable_texto_apellido)
 
 # Booleno
-mi_variable_booleana = True
+mi_variable_booleana = True # A fuerza se le tiene que poner una mayuscula al true sino lo detecta como cadena
 print('Tipo booleano:', mi_variable_booleana)
 
 # None
