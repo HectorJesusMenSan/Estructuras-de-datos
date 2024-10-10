@@ -42,3 +42,9 @@ print("otros gastos:", otros_gastos2)
 print("¿fue a mayor a mi presupuesto?", real_bool2)
 
 print("pruebilla") #Prueba de actualizacion de codigo en git hub
+
+"""
+En este codigo ponemos en practica las declaraciones de los tipos de datos que 
+podemos hacer al programar en phyiton, ligada tambien a una combinacion de escrituras
+
+"""
