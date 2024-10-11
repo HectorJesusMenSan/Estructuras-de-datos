@@ -34,6 +34,7 @@ print("otros gastos:", otros_gastos2)
 print("¿fue a mayor a mi presupuesto?", real_bool2)
 
 #Escritura de las variables de la parte 1
+#Prueba de actualizacion en git hub
 print("\n*** Gastos diarios ***")
 print("dia:", dia2)
 print("pasaje:", gasto_pasaje2)
