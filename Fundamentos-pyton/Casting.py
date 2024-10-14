@@ -40,3 +40,38 @@ print("Conversión de número a cadena.")
 print(f"Los números {var_int} y {var_float} se convierten a cadena utilizando str(var_int): {str(var_cadena)}, y "
       f"str(var_float): {str(var_float)}.") #Aqui se convirtieron a cadena las variables: var_float y var_cadena. y se escriben
 #Las transformaciónes a cadena se hacen utilizando el str().
+#A fuerza se le tiene que poner la f, sino no agarra el comando str.
+
+
+# *****   Conversión a booleano     *****
+# Si el valor es 0, cadena vacía o None, la función bool regresa un valor de False. En caso contrario, regresa True.
+print()
+print("Conversión a booleanos.")
+
+var_int = 0                                                             #Se crea variable tipo entero
+es_verdadero = bool(var_int)                                            #Se crea variable tipo bool
+print(f"¿El valor de {var_int} es verdadero? {es_verdadero}.")          #Como la variable tiene un valor a cero, se imprime falso
+var_int = -30
+es_verdadero = bool(var_int)
+print(f"¿El valor de {var_int} es verdadero? {es_verdadero}.")          #Aqui ya tiene valor diferente a cero y se imprime verdadero
+
+var_float = 0.0
+es_verdadero = bool(var_float)
+print(f"¿El valor de {var_float} es verdadero? {es_verdadero}.")
+var_float = 0.01
+es_verdadero = bool(var_float)
+print(f"¿El valor de {var_float} es verdadero? {es_verdadero}.")
+
+var_cadena = ""
+es_verdadero = bool(var_cadena)
+print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
+var_cadena = None
+es_verdadero = bool(var_cadena)
+print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
+var_cadena = " "
+es_verdadero = bool(var_cadena)
+print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
+
+"""
+Mientras se la variable tenga algo se mostrara como verdadero en todos los casos.
+"""
