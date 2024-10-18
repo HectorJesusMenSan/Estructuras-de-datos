@@ -1,8 +1,10 @@
-"""Nombre:
-Fecha:
-Descripcion: asignacion multiple"""
+"""Nombre: Héctor Jesús Méndez Santiago
+Fecha:  16 de Octubre del 2024
+Descripcion: En este programa se realizan las diferentes formas de asignar valores a las variables
+"asignacion multiple"
+"""
 
-variable1, variable2= 5, 10
+variable1, variable2= 5, 10                                        #Formas de
 valor3, valor4= 9.14, ("chuy")
 
 print(variable1, variable2, valor3, valor4)
