@@ -18,7 +18,7 @@ variable_logico2 = input("Ingresa sí o no: ")             # Solicitud y lectura
 variable_logico2 = variable_logico2.lower() == "si"       # Convertir el dato introducido en booleano, comparándolo con la palabra "sí".
 print("La segunda respuesta es: ", variable_logico2)      # Escritura en pantalla del segundo resultado
 
-## Comparaciones de los dos resultados obtenidos ##
+# Comparaciones de los dos resultados obtenidos #
 """
 Basándonos en los resultados de arriba, ya están convertidos en booleano: 
 si fueron "sí", el valor es true, y si no, el valor es false.

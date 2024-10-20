@@ -20,4 +20,4 @@ opcion3=input("'Eres alumno? si/no ")
 
 print(f"¿Tu eres miembro de la comunidad universitaria? {opcion2=="si" or opcion3=="si"}") # Respuesta en booleano.
 
-#Se usó el operador lógico or, porque si solo una resouesta fuece si, quiere decir que es miembro de la comunidad.
+#   Se usó el operador lógico or, porque si solo una resouesta fuece si, quiere decir que es miembro de la comunidad.
