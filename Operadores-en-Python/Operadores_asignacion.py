@@ -1,26 +1,31 @@
 """Nombre: Héctor Jesús Méndez Santiago
-Fecha:  16 de Octubre del 2024
-Descripcion: En este programa se realizan las diferentes formas de asignar valores a las variables
-"asignacion multiple"
+Fecha:  15 de Octubre del 2024
+Descripción: En este programa se realizan las diferentes formas de asignar valores a las variables
+"asignación múltiple"
 """
 
-variable1, variable2= 5, 10                                        #Formas de
-valor3, valor4= 9.14, ("chuy")
+variable1, variable2 = 5, 10                                        # Formas de asignar valores a las variables
+valor3, valor4 = 9.14, ("chuy")                                     # Se puede asignar variables de diferentes tipos en una sola línea de código
 
-print(variable1, variable2, valor3, valor4)
+print(variable1, variable2, valor3, valor4)                        # Imprime las variables
 
-variable5, variable6= variable1+variable2, variable1-variable2
-print(variable5, variable6)
+variable5, variable6 = variable1 + variable2, variable1 - variable2     # Suma y resta de las primeras variables, guardándolas en otras variables
+print(variable5, variable6)                                        # Imprimir valores
 
-#asignacion encadenada
-variable7=variable8=variable9=10
-print(variable7,variable8,variable9)
+# Asignación encadenada
+variable7 = variable8 = variable9 = 10                                   # Este tipo de asignación da el mismo valor a todas las variables
+print(variable7, variable8, variable9)
 
-#intercambio de variables
-variable10, variable11="alberto", "geto"
-print(variable10,variable11)
-variable11,variable10="geto", "alberto"
-print(variable11,variable10)
+# Intercambio de variables
+variable10, variable11 = "alberto", "geto"
+print(variable10, variable11)
+variable11, variable10 = "geto", "alberto"
+print(variable11, variable10)
 
-nombre, apellido= input("ingresa nombre: "), input("ingresa apellido: ")
+# En esta parte intercambiamos el valor de las dos variables: lo que contenía uno se le pasó al otro
+
+nombre, apellido = input("Ingresa nombre: "), input("Ingresa apellido: ")    # Se puede solicitar seguidamente una lectura en una línea de código.
 print(nombre, apellido)
+
+"""Al asignar un valor a las variables, ya sea entero, flotante, de tipo cadena, bool, etc., se debe seguir el orden
+de los datos a las variables que queremos asignar."""
