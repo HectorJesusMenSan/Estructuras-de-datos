@@ -17,4 +17,4 @@ respuesta = float(input("Ingresa la cantidad de dinero que gastaste en tu compra
 
 respuesta2 = input("¿Compras a meses en intereses?")                                  # Lectura de respuesta a pregunta.
 
-print(f"Aplicaste a la bonificación? {respuesta>=5000 and respuesta2=="si"}")         # Se le da a conocer el resultado de aplicacion a bonificación en booleano al usuario.
+print(f"Aplicaste a la bonificación? {respuesta>=5000 and respuesta2=="si"}")         # Se le da a conocer el resultado de aplicación a bonificación en booleano al usuario.
