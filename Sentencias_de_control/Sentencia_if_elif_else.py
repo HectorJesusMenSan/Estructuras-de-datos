@@ -21,8 +21,7 @@ if  edad<=14:
     print("grupo de niños y adolecentes.")
 elif edad >= 15 and edad <= 25:
     print("grupo de jovenes")
-else :
-    edad >= 46 and edad<=60
+elif edad >= 46 and edad<=60 :
     print("grupo de adultos jovenes")
-    if edad>60:
-        print("adultos mayores")
+elif edad>60 :
+    print("adultos mayores")
