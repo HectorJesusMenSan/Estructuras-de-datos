@@ -14,7 +14,7 @@ comunidad universitaria.
 
 """
 
-#   Solicitud de datos
+#   Solicitud de datos:
 opcion2=input("¿Eres profesor? si/no : ")
 opcion3=input("¿Eres alumno? si/no : ")
 

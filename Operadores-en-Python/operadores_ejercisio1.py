@@ -21,7 +21,7 @@ print()
 respuesta = float(input("Ingresa la cantidad de dinero que gastaste en tu compra: ")) # Solicitud y conversion de datos.
 
 respuesta2 = input("¿Compras a meses en intereses?")                                  # Lectura de respuesta a pregunta.
-respuesta2 = respuesta2.lower()                                                       # Esto convierte a minúscula la respuesta2
+respuesta2 = respuesta2.lower()                                                       # Esto convierte a minúscula la respuesta2.
 
 print(f"Aplicaste a la bonificación? { respuesta>=5000 and respuesta2 == 'si'}")         # Se le da a conocer el resultado de aplicación a bonificación en booleano al usuario.
 

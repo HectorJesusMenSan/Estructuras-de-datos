@@ -20,7 +20,7 @@ print()                                                                         
 respuesta1, respuesta2, respuesta3, respuesta4 = input("Para tu primer dato, ingresa V/F: "), input("Para tu segundo dato, ingresa V/F: "), input("Para tu tercer dato, ingresa V/F: "), input("Para tu cuarto dato, ingresa V/F: ")  # Solicitud y almacenamiento de datos a variables
 
 #Conversión de variables a booleano:
-respuesta1 = respuesta1.lower() == "v" # Esto convierte los datos a minúscula y lo coompara para guardarlo como  valor booleano
+respuesta1 = respuesta1.lower() == "v" # Esto convierte los datos a minúscula y lo coompara para guardarlo como  valor booleano.
 respuesta2 = respuesta2.lower() == "v"
 respuesta3 = respuesta3.lower() == "v"
 respuesta4 = respuesta4.lower() == "v"

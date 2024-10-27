@@ -45,3 +45,4 @@ print("\tControl de acceso: ")      # Imprime un letrero de información.
 variable_usuario_introducido, variable_contraseña_introducido= input("Ingrese usuario: "), input("Ingrese contraseña: ")  # Solicita datos al usuario y guarda en variables distintas.
 
 print(f"Tu contraseña y usuario son: {variable_usuario == variable_usuario_introducido and variable_contraseña == variable_contraseña_introducido}") # Imprime si la comparación de datos es correcta o no.
+print("Fin del programa.")
