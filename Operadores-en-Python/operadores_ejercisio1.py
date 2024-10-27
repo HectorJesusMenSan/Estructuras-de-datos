@@ -21,7 +21,8 @@ print()
 respuesta = float(input("Ingresa la cantidad de dinero que gastaste en tu compra: ")) # Solicitud y conversion de datos.
 
 respuesta2 = input("¿Compras a meses en intereses?")                                  # Lectura de respuesta a pregunta.
+respuesta2 = respuesta2.lower()                                                       # Esto convierte a minúscula la respuesta2
 
-print(f"Aplicaste a la bonificación? { respuesta>=5000 and respuesta2 == 'si' or respuesta2 == 'Si' or respuesta2== 'SI' }")         # Se le da a conocer el resultado de aplicación a bonificación en booleano al usuario.
+print(f"Aplicaste a la bonificación? { respuesta>=5000 and respuesta2 == 'si'}")         # Se le da a conocer el resultado de aplicación a bonificación en booleano al usuario.
 
-"En la maquina de la universidad al usar la comparaión de cadena con "" si compila. En mi maquina funciona con ''."
+"En la maquina de la universidad al usar la comparación de cadena con "" si compila; En mi maquina funciona con ''."
