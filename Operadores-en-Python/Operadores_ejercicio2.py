@@ -15,9 +15,11 @@ comunidad universitaria.
 """
 
 #   Solicitud de datos
-opcion2=input("¿Eres profesor? si/no ")
-opcion3=input("'Eres alumno? si/no ")
+opcion2=input("¿Eres profesor? si/no : ")
+opcion3=input("¿Eres alumno? si/no : ")
 
-print(f"¿Tu eres miembro de la comunidad universitaria? {opcion2=="si" or opcion3=="si"}") # Respuesta en booleano.
+print(f"¿Tú eres miembro de la comunidad universitaria? {opcion2 == 'si' or opcion3== 'si' }") # Respuesta en booleano.
 
 #   Se usó el operador lógico or, porque si solo una resouesta fuece si, quiere decir que es miembro de la comunidad.
+
+"En la maquina de la universidad al usar la comparaión de cadena con "" si compila. En mi maquina funciona con ''."

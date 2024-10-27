@@ -1,5 +1,4 @@
 
-
 """
 Nombre: Héctor Jesús Méndez Santiago
 Fecha:  16 de octubre de 2024
@@ -28,3 +27,9 @@ print(f"¿Ambas respuestas fueron sí? {variable_logico and variable_logico2}") 
 print(f"¿Una respuesta fue sí? {variable_logico or variable_logico2}")             # Devuelve un sí booleano, si alguno de los dos resultados es TRUE.
 print(f"La negación de la primera respuesta es:  {not variable_logico}")           # Devuelve en valor booleano la negación del primer resultado.
 print(f"La negación de la segunda respuesta es:  {not variable_logico2}")          # Devuelve en valor booleano la negación del segundo resultado.
+
+"""
+Los operadores lógicos permiten combinar expresiones booleanas (verdadero o falso) para crear condiciones más complejas.
+Estos operadores nos permiten realizar operaciones lógicas como "y", "o" y "no", lo que nos da la capacidad de tomar 
+decisiones más sofisticadas dentro de nuestros programas.
+"""

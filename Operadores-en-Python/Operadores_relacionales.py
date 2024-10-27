@@ -14,3 +14,19 @@ print(f"¿El número {numero1:.2f} es igual que {numero2:.2f}? {numero1==numero2
 print(f"¿El número {numero1:.2f} es menor que {numero2:.2f}? {numero1<numero2}")                #   Muestra en resultado booleano si el numero1 es menor al numero2.
 print(f"¿El número {numero1:.2f} es menor o igual que {numero2:.2f}? {numero1<=numero2}")       #   Muestra en resultado booleano si el numero1 es menor o igual al numero2.
 print(f"¿El número {numero1:.2f} es diferente que {numero2:.2f}? {numero1!=numero2}")           #   Muestra en resultado booleano si ambos numeros son diferentes.
+
+"""
+Los operadores relacionales son símbolos que se utilizan en programación para comparar dos valores. 
+Estos operadores devuelven un valor booleano (verdadero o falso) dependiendo del resultado de la comparación. 
+Son fundamentales para tomar decisiones dentro de un programa, ya que permiten construir expresiones condicionales 
+que determinan el flujo de ejecución.
+
+Operadores Relacionales Comunes:
+Operador	Significado
+==	Igual a
+!=	Diferente de
+>	Mayor que
+<	Menor que
+>=	Mayor o igual que
+<=	Menor o igual que
+"""

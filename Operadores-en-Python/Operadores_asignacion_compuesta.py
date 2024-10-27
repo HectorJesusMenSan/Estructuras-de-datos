@@ -38,3 +38,9 @@ numero3 += 3            # Al valor del numero3 se le aumenta una cantidad de 3.
 print(numero3)          # Escritura de resultados.
 numero3 /= 2            # Al valor del numero3 se le divide entre 2.
 print(numero3)          # Escritura del resultado de la operación.
+
+"""
+Los operadores de asignación compuestos son una forma abreviada de realizar una operación aritmética y una asignación
+en una sola línea de código. Combinan un operador aritmético (como suma, resta, multiplicación, división, etc.) 
+con el operador de asignación (=).
+"""
