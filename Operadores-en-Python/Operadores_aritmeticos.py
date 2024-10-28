@@ -20,3 +20,15 @@ print(f"Resultado de la división entre los dos números es: {(primer_numero / s
 
 print(f"Resultado es: {primer_numero // segundo_numero}") # // divide los dos números pero sin mostrar datos en decimales.
 print(f"Resultado es: {primer_numero ** segundo_numero}") # eleva el primer número a la potencia del segundo número.
+
+
+"""
+Los operadores aritméticos en Python son los siguientes:
+- Suma (+).
+- Resta (-).
+- Multiplicación (*).
+- División (/).
+- División entera (//).
+- Módulo (%).
+- Exponenciación (**).
+"""
