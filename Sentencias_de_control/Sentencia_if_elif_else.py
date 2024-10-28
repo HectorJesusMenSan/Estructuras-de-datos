@@ -1,7 +1,10 @@
 """
 Nombre:         Héctor Jesús Méndez Santiago.
 Fecha:          23 de octubre de 2024.
-Descripción:
+Descripción:    Forma de usar la sentencia elif.
+                La sentencia elif es una extensión del if-else y permite evaluar múltiples condiciones de forma secuencial.
+                Es como tener varias opciones a elegir, ejecutándose el bloque de código correspondiente a la primera condición
+                que sea verdadera.
 
 if condición :
     #datos
