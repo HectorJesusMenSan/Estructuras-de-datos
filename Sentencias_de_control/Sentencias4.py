@@ -19,11 +19,15 @@ c) Utilice la lógica adecuada para determinar el mensaje.
 
 d) Muestre el mensaje adecuado en consola.
 """
-dinero=int(input("Ingresa tu presupesto:"))
-edad=float(input("Ingresa tu edad: "))
 
-if dinero>=250.00 and edad>=18:
-    print("¡Bienbenido a tu mejor bar!")
-else:
-    print("Lo sentimos, ya estamos por cerrar.")
+# Solicitud de datos:
+print("CARGANDO PROGRAMA")                            # Escribe un letrero.
+print("Programa: Control de acceso en La Negra.")     # Escribe letrero informativo.
+dinero = float(input("Ingresa tu presupuesto: "))     # Convierte y guarda datos en flotante.
+edad = int(input("Ingresa tu edad: "))                # Convierte y guarda datos en entero.
 
+# Ejecución de condiciones:
+if dinero >= 250.00 and edad >= 18:                   # Si el presupuesto es mayor o igual que 250 y la edad mayor o igual que 18.
+    print("¡Bienvenido a tu mejor bar!")               # Si se cumple la condición, se le da acceso.
+else:                                                 # Si ambas condiciones no se cumplen.
+    print("Lo sentimos, ya estamos por cerrar.")      # Si no se cumple, no se les da acceso y se les corre de manera educada.

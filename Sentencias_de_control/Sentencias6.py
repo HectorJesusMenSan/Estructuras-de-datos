@@ -24,20 +24,25 @@ e) Calcule el costo total.
 
 f) Muestre los detalles del cliente y el día, así como el costo total.
 """
-costo_niño=100.00
-costo_adulto=200.00
-total=0
-nombre_de_usuario=input("Introdusca nombre del cliente: ")
-numero_de_adultos=int(input("Ingrese la cantidad de adultos: "))
-numero_de_niños=int(input("Ingrese la cantidad de niños: "))
-dia_de_semana=input("Ingresa dia de la semana: ")
-dia_de_semana=dia_de_semana.lower()
 
-if dia_de_semana=="lunes" or dia_de_semana=="martes" or  dia_de_semana=="juevez":
-    total=(numero_de_niños*costo_niño)+(numero_de_adultos*costo_adulto) - (((numero_de_adultos*costo_adulto)+(numero_de_niños*costo_niño))*10)/100
-    print(f"Gracias por tu visita {nombre_de_usuario} este dia {dia_de_semana}, el costo total es de: {total}")
-elif dia_de_semana=="miercoles" or dia_de_semana=="viernes":
-    total=(numero_de_niños*costo_niño)+(numero_de_adultos*costo_adulto)
-    print(f"Gracias por tu visita {nombre_de_usuario} este dia {dia_de_semana}, el costo total es de: {total}")
-else:
-    print("ERROR")
+# Declaración de Variables:
+costo_niño = 100.00
+costo_adulto = 200.00
+total = 0
+
+# Solicitud de datos:
+nombre_de_usuario = input("Introduzca nombre del cliente: ")
+numero_de_adultos = int(input("Ingrese la cantidad de adultos: "))
+numero_de_niños = int(input("Ingrese la cantidad de niños: "))
+dia_de_semana = input("Ingresa día de la semana: ")
+dia_de_semana = dia_de_semana.lower()                                 # Convierte lo ingresado a minúsculas.
+
+# Ejecución de condiciones:
+if dia_de_semana == "lunes" or dia_de_semana == "martes" or dia_de_semana == "jueves":  # Condiciones, si el día ingresado es lunes, martes o jueves.
+    total = (numero_de_niños * costo_niño) + (numero_de_adultos * costo_adulto) - (((numero_de_adultos * costo_adulto) + (numero_de_niños * costo_niño)) * 10) / 100  # Si se cumple la condición se aplica el descuento.
+    print(f"Gracias por tu visita {nombre_de_usuario} este día {dia_de_semana}, el costo total es de: {total}")
+elif dia_de_semana == "miércoles" or dia_de_semana == "viernes":                       # Condiciones, si los días ingresados son miércoles o viernes.
+    total = (numero_de_niños * costo_niño) + (numero_de_adultos * costo_adulto)            # Ejecuta la suma de los costos.
+    print(f"Gracias por tu visita {nombre_de_usuario} este día {dia_de_semana}, el costo total es de: {total}")
+else:                                                                              # Si no corresponde a ninguno de los anteriores.
+    print("ERROR")                                                                 # Imprime un comentario de error.
