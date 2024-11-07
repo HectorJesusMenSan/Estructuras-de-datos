@@ -43,7 +43,7 @@ for asteriscos in range(1, valor_de_filas+1):
     escrituras="*" * (contador + 1)
     espacios=" " * (valor_de_filas-asteriscos)
     contador+=2
-    print(f"{espacios}{escrituras}")
+    print(f" {espacios}{escrituras}")
 
 
 
