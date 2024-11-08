@@ -10,17 +10,17 @@ from sys import prefix
 contador=0
 valor_de_filas = int(input("Introduce el numero de filas que tenga tu piramide: "))
 # a)
-for asteriscos in range(1, valor_de_filas+1):
+for i in range(1, valor_de_filas + 1):
     contador+=1
-    for asteriscos in range(1, contador+1):
+    for i in range(1, contador + 1):
         print("*", end=" ")
     print("\n")
 print("______________________________________________________________________")
 contador=valor_de_filas
 # b)
-for asteriscos in range(1, valor_de_filas+1):
+for i in range(1, valor_de_filas + 1):
 
-    for asteriscos in range (contador):
+    for i in range (contador):
         print("*", end=" ")
     print("\n")
     contador -= 1
@@ -30,18 +30,17 @@ print("______________________________________________________________________")
 contador=valor_de_filas
 escrituras=0
 espacios=0
-for asteriscos in range(1, valor_de_filas+1):
+for i in range(1, valor_de_filas + 1):
     escrituras="*" * contador
-    espacios=" " * asteriscos
+    espacios=" " * i
     print(f"{espacios}{escrituras}")
     contador-=1
 print("______________________________________________________________________")
 # d)
-contador=valor_de_filas
 contador=0
-for asteriscos in range(1, valor_de_filas+1):
+for i in range(1, valor_de_filas + 1):
     escrituras="*" * (contador + 1)
-    espacios=" " * (valor_de_filas-asteriscos)
+    espacios=" " * (valor_de_filas - i)
     contador+=2
     print(f" {espacios}{escrituras}")
 
