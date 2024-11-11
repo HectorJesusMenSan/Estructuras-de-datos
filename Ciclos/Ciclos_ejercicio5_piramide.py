@@ -8,7 +8,7 @@ la cantidad de filas de la priamide.
 from sys import prefix
 
 contador=0
-valor_de_filas = int(input("Introduce el numero de filas que tenga tu piramide: "))
+valor_de_filas = int(input("Introduce el número de filas que tenga tu piramide: "))
 # a)
 for i in range(1, valor_de_filas + 1):
     contador+=1
