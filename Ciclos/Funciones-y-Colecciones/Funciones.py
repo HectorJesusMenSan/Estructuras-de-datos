@@ -4,7 +4,7 @@ Nombre:         Héctor Jesús Méndez Santiago.
 Fecha:          11 de noviembre de 2024.
 Descripción:    ciclos.
 """
-
+#Codigo principal, codigo nivel de modulo, no es funcion
 
 def hola(nombre):
     print(f"Hola {nombre}")
