@@ -2,8 +2,8 @@
 Nombre:         Héctor Jesús Méndez Santiago.
 Fecha:          12 de noviembre de 2024.
 Descripción:    Ejercicios de practica, listas.
+                Listas de Youtube.
 """
-from Ciclos.Ciclo_for import alumnos
 
 
 # DEFINICION DE FUNCIONES:
