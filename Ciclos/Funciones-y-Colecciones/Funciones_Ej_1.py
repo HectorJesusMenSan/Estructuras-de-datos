@@ -5,23 +5,6 @@ Fecha:          11 de noviembre de 2024.
 Descripción:    Introducción a funciones.
 """
 
-# Código principal, código a nivel de módulo, se le llama al código que no va en funciones
-
-"""def para definir función.
-   A comparación de C o C++
-   en Python solo necesita, el
-   nombre y el tipo de datos que
-   recibe, esto en tanto de definición.
-
-   -LAS FUNCIONES SIRVEN PARA RESOLVER
-   PROBLEMAS GRANDES Y COMPLEJOS, POR 
-   PEQUEÑAS SECCIONES-"""
-
-
-# Definición de función.
-def hola(nombre):  # Recibe un nombre.
-    # Acción de función
-    print(f"Hola {nombre}")  # Imprime el nombre.
 
 
 # Función para el menú:
@@ -37,7 +20,7 @@ def menu():  # No recibe datos.
     print("6) Módulo")
     print("7) Potenciación")
     opcion = int(input("Escoge una opción: "))
-    return opcion
+    return opcion      # Retorna opción elegida por usuario.
 
 
 # Función para calcular números
@@ -50,7 +33,7 @@ def calculadora():  # No recibe datos
         if opcion == 1:
             numero = float(input("Ingresa primer número: "))
             numero2 = float(input("Ingresa segundo número: "))
-            print(f"La suma de los dos números es: {numero + numero2} \n")
+            print(f"La suma de los dos números es: {numero + numero2 :.3f} \n")
 
         # Código para implementar resta:
         elif opcion == 2:
@@ -62,25 +45,25 @@ def calculadora():  # No recibe datos
         elif opcion == 3:
             numero = float(input("Ingresa primer número: "))
             numero2 = float(input("Ingresa segundo número: "))
-            print(f"La multiplicación de los dos números es: {numero * numero2}\n")
+            print(f"La multiplicación de los dos números es: {numero * numero2:.3f}\n")
 
         # Código para implementar división:
         elif opcion == 4:
             numero = float(input("Ingresa primer número: "))
             numero2 = float(input("Ingresa segundo número: "))
-            print(f"La división de los dos números es: {numero / numero2}\n")
+            print(f"La división de los dos números es: {numero / numero2:.3f}\n")
 
         # Código para implementar división entera:
         elif opcion == 5:
             numero = float(input("Ingresa primer número: "))
             numero2 = float(input("Ingresa segundo número: "))
-            print(f"La división entera de los dos números es: {numero // numero2}\n")
+            print(f"La división entera de los dos números es: {numero // numero2:.3f}\n")
 
         # Código para implementar exponenciación:
         elif opcion == 6:
             numero = float(input("Ingresa primer número: "))
             numero2 = float(input("Ingresa segundo número: "))
-            print(f"La exponenciación de los dos números es: {numero ** numero2}\n")
+            print(f"La exponenciación de los dos números es: {numero ** numero2:.3f}\n")
 
         # Código para implementar salida de programa:
         elif opcion == 0:
@@ -92,8 +75,3 @@ def calculadora():  # No recibe datos
 
 
 calculadora()  # Llamada a función calculadora
-
-nombre = input("Ingresa tu nombre: ")
-hola(nombre)  # Llamada a la función hola.
-print("Adiós")
-

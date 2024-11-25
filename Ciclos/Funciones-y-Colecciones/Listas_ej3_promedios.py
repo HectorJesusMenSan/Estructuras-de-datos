@@ -6,10 +6,6 @@ Descripción:    Ejercicios de practica, listas.
 """
 
 
-# Definicion de listas:
-lista_de_alumnos = []
-lista_de_calificaciones = []
-lista_de_materias = ["Estructura de datos", "Derecho y ledislación", "Contabilidad", "Electronica", "Algebra"]
 
 # Definición de menu:
 # No recibe ningun dato, y retorna la opcion del menu escogido por el usuario.
@@ -59,11 +55,37 @@ def Mostrar_datos (lista_de_alumnos, lista_de_materias, lista_de_calificaciones)
             contador_auxiliar+=1
         print("..................................................................")
 
+def Eliminar_alumno(lista_de_alumnos, lista_de_calificaciones):
+    contador=0
+
+    for alumnos in lista_de_alumnos:
+
+        print(f"{contador}){alumnos}")
+        print("\n")
+        contador+=1
+    # Elimina nombre
+    alumno_a_eliminar=int(input("Elige que alumno eliminar: "))
+    del lista_de_alumnos[alumno_a_eliminar]
+    # Elimina califiacion:
+    contador=alumno_a_eliminar*5
+    contador2=0
+    for i in (contador2, 6):
+        del lista_de_calificaciones [contador]
+        contador+=1
+
+    return lista_de_alumnos, lista_de_calificaciones
+
 
 #_____________________________________________________________________________________________________
-opcion=None
+opcion=None# Definicion de listas:
+lista_de_alumnos = []
+lista_de_calificaciones = []
+lista_de_materias = ["Estructura de datos", "Derecho y legislación", "Contabilidad", "Electronica", "Algebra"]
 while opcion != 0:
     opcion = Menu()
     if opcion==3:
         Añadir_alumno(lista_de_alumnos, lista_de_materias, lista_de_calificaciones)
+        Mostrar_datos(lista_de_alumnos, lista_de_materias, lista_de_calificaciones)
+    elif opcion==4:
+        Eliminar_alumno(lista_de_alumnos, lista_de_calificaciones)
         Mostrar_datos(lista_de_alumnos, lista_de_materias, lista_de_calificaciones)

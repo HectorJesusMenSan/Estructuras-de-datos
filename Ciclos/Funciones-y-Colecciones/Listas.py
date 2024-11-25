@@ -18,7 +18,9 @@ La ultima en entrar es la primera en salir
 
 #Crea lista:
 alumnos=[]
-alumnos.append("Hector")    #inserta valor al final
+
+#inserta valor al final de la lista:
+alumnos.append("Hector")
 alumnos.append("Addi")
 alumnos.append("Alberto")
 alumnos.append("Juan")
@@ -47,6 +49,8 @@ print("\n")
 for alumno in alumnos:
     print(alumno, end=" ")
 print("\n")
+
+"""Tomar en cuenta que son vectores, asi que para acceder a ellos es de 0 a n numero."""
 
 #Listas Declaradas:
 print("\nListas declaradas: ")
