@@ -1,6 +1,6 @@
 """
 Nombre:         Héctor Jesús Méndez Santiago.
-Fecha:          13 de noviembre de 2024.
+Fecha:          25 de noviembre de 2024.
 Descripción:    Ejercicios de practica, listas.
                 Promedios del parcial 1.
 """
