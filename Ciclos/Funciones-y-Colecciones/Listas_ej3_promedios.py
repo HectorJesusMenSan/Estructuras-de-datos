@@ -1,109 +1,127 @@
 """
 Nombre:         Héctor Jesús Méndez Santiago.
 Fecha:          13 de noviembre de 2024.
-Descripción:    Ejercicios de practica, listas.
+Descripción:    Ejercicios de práctica, listas.
                 Promedios del parcial 1.
 """
 
-
-
-# Definición de menu:
-# No recibe ningun dato, y retorna la opcion del menu escogido por el usuario.
+# Menú principal, pide una opción y la retorna
 def Menu ():
-    print("\n______________________________________________")
-    print("|     1) Ver calificaciones de alumno.       |")
-    print("|     2) Ver promedios de alumnos.           |")
-    print("|     3) Añadir alumno.                      |")
-    print("|     4) Eliminar alumno.                    |")
-    print("|     5) Ver promedio grupal.                |")
-    print("|     0) Salir.                              |")
-    print("______________________________________________")
-    opcion_del_menu=int(input("ingresa una opción:      \n"))
+    print("\n____________________________________________________________")
+    print("|     1) Ver calificaciones de todos los alumnos.             |")
+    print("|     2) Ver calificaciones detalladas de un alumno           |")
+    print("|     3) Ver promedio del parcial de todos                    |")
+    print("|     4) Ver promedio grupal                                  |")
+    print("|     5) Agregar alumno y calificaciones                      |")
+    print("|     6) Eliminar alumno y calificaciones                     |")
+    print("|     0) Salir.                                               |")
+    print("______________________________________________________________")
+    opcion_del_menu = int(input("Ingresa una opción:      \n"))
     return opcion_del_menu
 
+# Función para ver las calificaciones de un alumno
+def ver_calificaciones_de_alumno(lista_de_alumnos, lista_de_calificaciones, lista_de_materias):
+    contador_de_alumnos = len(lista_de_alumnos)  # Cuenta cuántos alumnos hay
+    if contador_de_alumnos != 0:
+        contador = 0
+        for alumno in lista_de_alumnos:
+            print(f"[{contador}]-  {alumno}")
+            contador += 1
+        alumno_a_ver = int(input("Escoge el alumno para ver sus calificaciones: "))
+        print(f"\t{lista_de_alumnos[alumno_a_ver]}")
 
-def Recepcion_de_calificaciones_por_materia(lista_de_materias, lista_de_calificaciones, lista_de_calificaciones_por_materia):
-    print("\n_________________________________________________________________________")
-    print(" S E C C I O N   D E  I N G R E S O  D E   C A L I F I C A C I O N E S:")
-    for i in lista_de_materias:
-        calificacion = int(input(f"\nCalificacion de la materia {i}: "))
-        lista_de_calificaciones_por_materia.append(calificacion)
-    print("..................................................................")
-    lista_de_calificaciones.append(lista_de_calificaciones_por_materia)
-    return lista_de_materias, lista_de_calificaciones, lista_de_calificaciones_por_materia
+        contador2 = 0
+        for calificacion in lista_de_calificaciones[alumno_a_ver]:
+            print(lista_de_materias[contador2], end=": ")
+            print(calificacion)
+            contador2 += 1
+    else:
+        print("No hay alumnos por mostrar.")
 
+# Función para mostrar calificaciones de todos los alumnos
+def ver_calificaciones_de_todos(lista_de_alumnos, lista_de_calificaciones):
+    contador_de_alumnos = len(lista_de_alumnos)  # Cuenta cuántos alumnos hay
+    if contador_de_alumnos != 0:
+        contador = 0
+        for calificacion in lista_de_calificaciones:
+            print(lista_de_alumnos[contador], end=": ")
+            print(calificacion)
+            contador += 1
+    else:
+        print("No hay alumnos por mostrar.")
 
-#Definicion de la funcion para añadir alumnos:
-#Recibe la lista de alumnos y retorna la lista de alumnos actualizada
-def Añadir_alumno (lista_de_alumnos, lista_de_materias, lista_de_calificaciones, lista_de_calificaciones_):
-    nombre_de_alumno = input("\nIngresa el nombre del alumno:        ")
-    lista_de_alumnos.append(nombre_de_alumno)
-    Recepcion_de_calificaciones_por_materia(lista_de_materias, lista_de_calificaciones)
-    return lista_de_alumnos, lista_de_materias, lista_de_calificaciones,
+# Agrega un alumno con sus calificaciones
+def agregar_alumno_y_calificaciones(lista_de_alumnos, lista_de_calificaciones, lista_de_materias):
+    lista_de_calificacion_por_materia = []  # Lista de calificaciones por materia
+    nombre = input("-Ingresa el nombre del alumno: ")
+    lista_de_alumnos.append(nombre)
 
-def Mostrar_datos (lista_de_alumnos, lista_de_materias, lista_de_calificaciones):
-    contador_auxiliar = 0
-    contador_de_alumnos = len(lista_de_alumnos)
-    print("\n_________________________________________________________________________")
-    print("\nS E C C I Ó N    D E    C A L I F I C A C I O N E S")
-    for iterador in range (1, contador_de_alumnos+1):
-        print("..................................................................")
-        print(f"\tAlumno: {lista_de_alumnos[iterador-1]}  ")
-        for materia in lista_de_materias:
+    # Calificaciones para cada materia
+    calificacion = float(input("Ingresa calificación de Estructura de datos: "))
+    lista_de_calificacion_por_materia.append(calificacion)
+    calificacion = float(input("Ingresa calificación de Derecho: "))
+    lista_de_calificacion_por_materia.append(calificacion)
+    calificacion = float(input("Ingresa calificación de Contabilidad: "))
+    lista_de_calificacion_por_materia.append(calificacion)
+    calificacion = float(input("Ingresa calificación de Álgebra: "))
+    lista_de_calificacion_por_materia.append(calificacion)
+    calificacion = float(input("Ingresa calificación de Electrónica: "))
+    lista_de_calificacion_por_materia.append(calificacion)
 
-            print(f" {materia}  :  {lista_de_calificaciones [contador_auxiliar]}")
+    # Añade el nuevo alumno y sus calificaciones a las listas
+    lista_de_calificaciones.append(lista_de_calificacion_por_materia)
 
-            contador_auxiliar+=1
-        print("..................................................................")
-    return lista_de_alumnos, lista_de_materias, lista_de_calificaciones
-#Funcion para mostrar calificaciones de un alumno escogido por el usuario:
-def Mostrar_alumno (lista_de_alumnos, lista_de_materias, lista_de_calificaciones):
-    print("De cual alumno deseas ver calificaciones:\n")
-    contador=0
+    return lista_de_alumnos, lista_de_calificaciones, lista_de_calificacion_por_materia
 
-    #Imprime a los alumnos, dando al usuario la posibilidad de escoger una opcion:
-    for alumno in lista_de_alumnos:
-        print(f"{contador}) {alumno}")
-        contador+=1
-    opcion_para_mostrar_alumno = int(input("Ingresa una opcion:     "))
-    #Imprime el nombre del alumno:
-    print(f"Nombre de alumno: {lista_de_alumnos[opcion_para_mostrar_alumno]}")
-    opcion_para_mostrar_alumno=opcion_para_mostrar_alumno*5
-    for iterador in range(1, 6):
-        print(f"Materia: {lista_de_materias[iterador-1]}        Cal:------{lista_de_calificaciones[opcion_para_mostrar_alumno]}")
-        opcion_para_mostrar_alumno+=1
-    return lista_de_alumnos, lista_de_materias, lista_de_calificaciones
+# Elimina un alumno y sus calificaciones
+def eliminar_alumno(lista_de_alumnos, lista_de_calificaciones):
+    contador_de_alumnos = len(lista_de_alumnos)  # Cuenta cuántos alumnos hay
+    if contador_de_alumnos != 0:
+        contador = 0
+        for alumno in lista_de_alumnos:
+            print(f"[{contador}]-  {alumno}")
+            contador += 1
+        alumno_a_eliminar = int(input("Escoge el alumno para eliminar: "))
+        print(f"\t{lista_de_alumnos[alumno_a_eliminar]}")
 
-#Funcion para eliminar:
-def Eliminar(lista_de_alumnos, lista_de_materias, lista_de_calificaciones):
-    contador=0
-    for alumno in lista_de_alumnos:
-        print(f"[{contador}] {alumno}\n")
-    alumno_a_eliminar = int(input("Escoge el alumno que deseas eliminar: "))
-    del lista_de_alumnos[alumno_a_eliminar]
-    del  lista_de_calificaciones[alumno_a_eliminar]
+        # Elimina el alumno y sus calificaciones
+        del lista_de_calificaciones[alumno_a_eliminar]
+        del lista_de_alumnos[alumno_a_eliminar]
 
+        # Muestra la lista actualizada de calificaciones
+        contador = 0
+        for calificacion in lista_de_calificaciones:
+            print(lista_de_alumnos[contador], end=": ")
+            print(calificacion)
+            contador += 1
+    else:
+        print("No hay alumnos por eliminar.")
 
-
-
-
-
-
-
-
-#_____________________________________________________________________________________________________
-opcion=None# Definicion de listas:
-lista_de_calificaciones_por_materia = []
+#________________________________________Módulo Principal_____________________________________________________________
+opcion = None
+# Definición de las listas
 lista_de_alumnos = []
 lista_de_calificaciones = []
-lista_de_materias = ["Estructura de datos", "Derecho y legislación", "Contabilidad", "Electronica", "Algebra"]
-while opcion != 0:
-    opcion = Menu()
-    if opcion==1:
-        Mostrar_alumno(lista_de_alumnos, lista_de_materias, lista_de_calificaciones)
+lista_de_calificacion_por_materia = []
+lista_de_materias = ["Estructura de datos", "Derecho", "Contabilidad", "Álgebra", "Electrónica"]
 
-    elif opcion==3:
-        Añadir_alumno(lista_de_alumnos, lista_de_materias, lista_de_calificaciones)
-    elif opcion==4:
-        Eliminar(lista_de_alumnos,lista_de_materias, lista_de_calificaciones)
-        Mostrar_datos(lista_de_alumnos, lista_de_materias, lista_de_calificaciones)
+# Ciclo para menu de interacción
+while opcion != 0:
+    opcion = Menu()  # Muestra el menú
+    if opcion == 1:
+        ver_calificaciones_de_todos(lista_de_alumnos, lista_de_calificaciones)  # Muestra todas las calificaciones de todos
+    elif opcion == 2:
+        ver_calificaciones_de_alumno(lista_de_alumnos, lista_de_calificaciones, lista_de_materias)  # Ver un alumno
+    elif opcion == 5:
+        agregar_alumno_y_calificaciones(lista_de_alumnos, lista_de_calificaciones, lista_de_materias)  # Agregar alumno
+    elif opcion == 6:
+        eliminar_alumno(lista_de_alumnos, lista_de_calificaciones)  # Eliminar alumno
+    else:
+        print("Error")  # Opción inválida
+"""
+Este programa intenta manipular las listas con funciones.
+El programa consiste en desplegar un menú donde el usuario interactúa para realizar diferentes acciones , 
+como agregar alumnos, ver sus calificaciones, eliminar calificaciones, calcular el promedio de uno y de todos los alumnos.
+Siendo sincero, estuve tratando de manipular las listas con las funciones como lo pidió, 
+pero en la parte de los promedios no pude, perdí mucho tiempo, esfuerzo, sudor y lágrimas.
+"""
