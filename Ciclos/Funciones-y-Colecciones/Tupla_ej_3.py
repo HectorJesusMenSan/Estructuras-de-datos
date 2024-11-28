@@ -23,13 +23,13 @@ def jornadas_para_juego (lista_de_equipos):
         auxiliar = lista_de_equipos[iterador]
         lista_de_equipos[iterador]=lista_de_equipos[iterador+1]
         lista_de_equipos[iterador+1]= auxiliar
-        iterador2=1
+        iterador2=0
         while iterador2 <= contador_de_lista2:
             tupla_de_equipos= (lista_de_equipos[iterador2], lista_de_equipos[iterador2+1])
             lista_de_tuplas.append(tupla_de_equipos)
             iterador2+=2
-            contador_de_lista_de_tulas = len(lista_de_tuplas)
-        for enfrentamientos in range(0, contador_de_lista_de_tulas):
+            contador_de_lista_de_tuplas = len(lista_de_tuplas)
+        for enfrentamientos in range(0, contador_de_lista_de_tuplas):
             tupla_de_equipos = lista_de_tuplas[enfrentamientos]
             print(f"{tupla_de_equipos[0]} vs {tupla_de_equipos[1]}")
 
