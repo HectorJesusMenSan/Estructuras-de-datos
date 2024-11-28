@@ -6,7 +6,7 @@ Descripción:    Ejercicios de practica, listas.
 """
 from random import random
 
-# Se cream dos conjuntos de numeros:
+# Se crean dos conjuntos de numeros:
 conjuntoA = {11, 7, 10, 9, 5, 1, 15, 7}
 conjuntoB = {55, 70, 11, 77, 66, 9, 5}
 #Operacones basicas:
