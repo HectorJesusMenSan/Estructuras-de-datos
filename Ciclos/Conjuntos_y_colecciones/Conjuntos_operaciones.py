@@ -1,8 +1,8 @@
 """
 Nombre:         Héctor Jesús Méndez Santiago.
 Fecha:          26 de noviembre de 2024.
-Descripción:    Ejercicios de practica, listas.
-                Promedios del parcial 1.
+Descripción:    Programa de introduccion al tema
+                de Conjuntos.
 """
 from random import random
 
