@@ -37,12 +37,12 @@ conjunto_303:{print(conjunto_nombres)}
 for nombre in conjunto_nombres:
     print(nombre, end=",")
 # Verifica si un elemento pertenecea a un conjunto
-print(f"El elemento {"nombre"} pertenece al conjunto? {nombre in conjunto_nombres}")
+print(f"El elemento {nombre} pertenece al conjunto? {nombre in conjunto_nombres}")
 
 
 Conjunto_De_Numeros={1, 1.2, 3.2, 4.1}
 #Funcion tamaño del conjunto:
 tamaño_de_conjunto= len(Conjunto_De_Numeros)
 #Funcin para sumar todos los elementos:
-suma de los elementos: sum(Conjunto_De_Numeros)
+suma_de_los_elementos: sum(Conjunto_De_Numeros)
 
