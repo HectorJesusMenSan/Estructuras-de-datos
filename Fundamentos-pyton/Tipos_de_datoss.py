@@ -1,8 +1,8 @@
-'''
+"""
 Héctor Jesús Méndez Santiago
 9 de octubre de 2024.
 Descripción: En este programa estan los tipos de variables en python y su forma en las que se usan.
-'''
+"""
 
 # Notas:
 """
