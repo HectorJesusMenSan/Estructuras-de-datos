@@ -244,3 +244,8 @@ while opcion != 0:
                 print(elemento, end="")
     else:
         print("ERROR. OPCIÓN INVÁLIDA")
+
+
+"""El programa consiste en convertir un número introducido 
+  por el usuario, ya sea decimal, hexadecimal o binario, 
+  dependiendo de la elección del usuario."""

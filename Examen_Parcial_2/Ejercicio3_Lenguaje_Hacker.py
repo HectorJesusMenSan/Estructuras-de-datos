@@ -164,3 +164,8 @@ while opcion != 0:
         print("Salida del programa exitosa.")
     else:
         print("ERROR, OPCIÓN INVÁLIDA.")
+
+"""El programa consiste en verificar cada una de las palabras en un 
+   texto introducido por el usuario y cambiarlas, ya sea por el 
+   abecedario o las vocales en lenguaje Hacker, dependiendo de la 
+   elección del usuario."""

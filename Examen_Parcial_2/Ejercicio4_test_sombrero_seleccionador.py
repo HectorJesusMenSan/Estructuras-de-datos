@@ -224,3 +224,7 @@ while opcion != 0:
         ejecucion_de_test(Diccionario_de_preguntas)     # Llamada a la función
     else:
         print("Error.")
+
+
+
+"""El programa registra los datos de las opciones elegidas por el usuario y, dependiendo de eso, se le da un resultado."""

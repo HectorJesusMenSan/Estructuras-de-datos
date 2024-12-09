@@ -59,6 +59,10 @@ print("Programa terminado")
 
 
 
+"""El programa consiste en imprimir una escalera con la cantidad de escalones 
+   proporcionados por el usuario, con la restricción de que si el número es 
+   positivo, la escalera asciende, y si es negativo, la escalera desciende."""
+
 
 
 
