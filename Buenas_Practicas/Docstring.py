@@ -1,11 +1,14 @@
 """
 Nombre: Héctor Jesús Méndez Santiago
-Fecha: 8 de enero del 2025
-Descripción: En la serie "el juego del calamar" se presenta una version
-            del juego piedra papel o tijeras, usado las dos manos, este programa
-            intentara imitar la misma dinamica con el cpu y un usuario.
+Fecha: 9 de enero del 2025
+Descripción: Docstring, para documentar funciones.
+             Muestra paramametros y datos que retornan.
 """
-def menu ():
+def menu ()->int:
+    """
+    Muestra el menu del programa
+    :return: Dato que el usuario escogio para realizar acciones disponibles
+    """
     print("__________________________________________________________________________")
     print("\n1) convertir a entero")
     print("2) convertir a flotante")
@@ -20,6 +23,14 @@ def menu ():
     return int (opcion)
 
 def cadena_a_entero (cadena: str) -> int|None:
+    """
+
+    :param cadena: Es la cadena a convertir a numero entero
+
+    funcion que convierte cadenas en numeros enteros, con validaciones correctas.
+
+    :return: Un dato entero o un none en caso de que no se introduzca un numero correcto
+    """
     no_guiones = cadena.count("-")
     revisar_cadena = cadena.lstrip("-")
 
