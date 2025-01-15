@@ -4,6 +4,11 @@ Fecha: 13 de enero del 2025
 Descripción: Bibliotecas como en c
 """
 def cadena_a_flotante(cadena: str) -> float|None:
+    """
+    Funcion que convierte datos de tipo cadena a flotante, con la vlidacion
+    :param cadena:
+    :return: Retorna un dato flotante o no retorna nada.
+    """
     no_guiones = cadena.count("-")
     no_puntos = cadena.count(".")
     revisar_cadena = cadena.lstrip("-").replace(".","")
@@ -60,17 +65,24 @@ def menu() -> int:
 
     return int(opcion)
 
-#:::::::::::::::::::::::::::::::::::::::::::::MODULO::::::::::::::::::::::::::::::::::::::::::::::::::::
-if __name__ == '__main__':
+def main() -> None:
+    """
+    Funcion de las instrucciones a ejecutar del menu
+    :return: No retorna nada
+    """
     opcion = None
 
     while opcion != 0:
         opcion = menu()
         if opcion == 0:
             print("Programa terminado.")
-        elif opcion == 1:
-            operaciones(opcion)
-        elif opcion == 2:
+        elif opcion == 1 or opcion == 2:
             operaciones(opcion)
         else:
             print("Error")
+
+
+
+#:::::::::::::::::::::::::::::::::::::::::::::MODULO::::::::::::::::::::::::::::::::::::::::::::::::::::
+if __name__ == '__main__':
+    main()
