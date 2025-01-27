@@ -230,7 +230,7 @@ def jugar_contra_jugador2 ()->None:
                 columna = int(columna)
 
         if ganador(matriz_de_juego, jugador):
-            print("\nGana jugador1")
+            print("\nGana jugador1.")
             contador = 0
             break
 
@@ -309,7 +309,7 @@ def jugar_contra_jugador2 ()->None:
                     columna = int(columna)
 
         if ganador(matriz_de_juego, jugador2):
-            print("Gana Jugadro 2")
+            print("\nGana Jugadro 2.")
             contador = 0
             break
 

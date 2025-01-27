@@ -132,7 +132,7 @@ def ejecucion_de_juego()->None:
         while not letra_De_usuario.isalpha() or len(letra_De_usuario)>1:
             letra_De_usuario = input("\nError, ingresaste un dato que no pertenece al alfabeto. intenta de nuevo: ")
             if len(letra_De_usuario)>1 :
-                print("\nIngresate una palabra y no una letra")
+                print("\nIngresate una palabra y no una letra.")
                 letra_De_usuario= input("\nIntenta de nuevo: ")
 
         letra_De_usuario = letra_De_usuario.lower()
