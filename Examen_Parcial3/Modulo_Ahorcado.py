@@ -60,8 +60,8 @@ def dibujos(bandera: 1) -> None:
         print("|       O")
         print("|      ---")
         print("|       |")
-        print("|      / \ ")
-        print("|        ")
+        print("|      ^ ^  ")
+        print("|         ")
         print("|        ")
         print("[]       ")
 
@@ -109,11 +109,12 @@ def ejecucion_de_juego() -> None:
     Ejecución principal del juego del ahorcado
     :return: No retorna nada
     """
-    palabras_por_defecto = ["zorra", "arroz", "sombrilla", "telaraña"]
+    palabras_por_defecto = ["teclado"]
     errores = 1
     contador = None
     bandera = 1
     bandera2 = 0
+    contador_de_letras = 0
 
     dibujos(bandera)  # Muestra la figura del ahorcado al iniciar
 
@@ -146,7 +147,11 @@ def ejecucion_de_juego() -> None:
             if letra_De_usuario == palabra_a_adivinar[i]:
                 for palabra in palabra_escondida:
                     if palabra == letra_De_usuario:
-                        print("Letra repetida.\n")
+                        contador_de_letras += 1
+                        break
+                    if contador_de_letras>1:
+                        print("letra repetida")
+                        contador_de_letras = 0
                         break
                 palabra_escondida[i] = letra_De_usuario
                 bandera2 = 1

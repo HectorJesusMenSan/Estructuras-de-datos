@@ -6,6 +6,7 @@ Descripción: Ejercicio para la presentación del examen del tercer parcial
 """
 
 
+
 def menu_operaciones () -> int:
     """
     Mnú que se desplega para la interaccion con el usuario
@@ -29,11 +30,14 @@ def menu_operaciones () -> int:
 
 
 
-def Realizar_operaciones (opcion:int, *Vargs:list):
-    opcion = None
-
+def Realizar_operaciones (opcion:int, *Vargs):
+    resultado = 0
     if opcion == 1:
-        print(sum(*vars()))
+        print(sum(list(Vargs)))
+    else:
+        for i in Vargs:
+            resultado *= i
+        print(resultado)
 
 def recepcion_de_datos ():
     lista_de_numeros = []
@@ -51,11 +55,31 @@ def recepcion_de_datos ():
             respuesta = input("Intenta de nuevo")
             respuesta = respuesta.lower()
 
-        if respuesta != "s" or respuesta!="n":
-            while not respuesta != "s" or respuesta!="n":
+        if len(respuesta) > 1:
+            while len(respuesta)!=1:
                 print("Error, dato no valido")
 
                 respuesta = input("Intenta de nuevo: ")
                 respuesta = respuesta.lower()
 
 
+    return lista_de_numeros
+
+def menu ():
+    tupla = ()
+    opcion = None
+    while opcion != 0 :
+        opcion = menu_operaciones()
+        if opcion == 1:
+            tupla = recepcion_de_datos()
+            Realizar_operaciones(opcion, tupla)
+
+        elif opcion == 2:
+            tupla = recepcion_de_datos()
+            Realizar_operaciones(opcion, tupla)
+        else:
+            print("Salda exitosa")
+
+
+if __name__ == '__main__':
+    menu()
