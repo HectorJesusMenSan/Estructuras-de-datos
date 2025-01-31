@@ -4,20 +4,27 @@ Fecha: 28 de enero del 2025
 Descripción: Ejercicio para mejorar la habilidad en el tema de
              argumentos variables.
 """
-def calcular_suma(*vargs: list) -> None:
+def calcular_min_max(*vargs: list) -> None:
     """
-    Calcula de la lista recibida la suma de todos los números pares.
+    Calcula de la lista recibida cuál es el número más grande y cuál el más pequeño.
     :param vargs: Una lista que contiene números ingresados por el usuario.
     :return: No retorna nada, pero muestra en pantalla los resultados.
     """
-    suma = 0
+    max = 0
     if len(vargs) != 0:
         for numeros in vargs:
-            if numeros % 2 == 0:
-                suma += numeros
-        print(f"La suma de todos los números introducidos es: {suma}")
+            if numeros > max:
+                max = numeros
+
+        minimo = max
+        for numeros in vargs:
+            if numeros < minimo:
+                minimo = numeros
+
+        print(f"El número más grande que introduciste es: {max}, El número más pequeño es: {minimo}")
     else:
         print("No has ingresado ningún dato, lo siento, no te puedo dar un resultado.")
+
 
 def cadena_a_flotante(cadena: str) -> float | None:
     """
@@ -34,24 +41,25 @@ def cadena_a_flotante(cadena: str) -> float | None:
     else:
         return None
 
+
 def menu_de_iteraccion() -> None:
     """
     Menú que proporciona distintas acciones al usuario para realizar, crea una lista con números
-    introducidos y los manda a la función calcular_suma, para que se muestren los resultados.
+    introducidos y los manda a la función que calcula qué número es el máximo y cuál es el mínimo.
     :return: No retorna nada
     """
     lista_de_numeros = []
     opcion = None
     while opcion != 0:
 
-        numero = input("Ingresa un número o presiona [s] para parar o mostrar suma: ")
+        numero = input("Ingresa un número o presiona [s] para parar o encontrar el número más grande y el más pequeño: ")
         while not cadena_a_flotante(numero) and numero != "s":
 
             numero = input("Error, Ingresa la opción nuevamente: ")
 
         if numero == "s":
 
-            calcular_suma(*lista_de_numeros)
+            calcular_min_max(*lista_de_numeros)
 
             break
         else:
