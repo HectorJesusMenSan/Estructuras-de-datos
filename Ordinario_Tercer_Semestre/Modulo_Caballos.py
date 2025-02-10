@@ -66,12 +66,40 @@ def reglas_de_juego ():
 
 
 def juego_contra_cpu (diccionario_de_barajas):
-    columnas_verificadas = []
-    regresos_realizados = []
+    columnas_verficadas = []
+    bandera = 0
+    contador_escoger = 1
 
     matriz_de_juego = [["copa","    ", "    ", "    ", "M"], ["abasto", "    ", "    ", "    ", "E"], ["moneda", "    ", "    ", "    ", "T"], ["espada", "    ", "    ", "    ", "A"]]
     print("\n\tComenzando carrera: \n")
     imprimir_matriz(matriz_de_juego)
+
+    print("\n->Escoge a que caballo apostaras:\n ")
+    for llave in diccionario_de_barajas.keys():
+        print(f"[{contador_escoger}]", end="")
+        print(f"Caballo: {llave}")
+        contador_escoger += 1
+
+    caballo_usuario = input("Escribe la opcion que deceas: ")
+    while not caballo_usuario.isnumeric() or int(caballo_usuario) not in range (1, 5):
+        caballo_usuario = input("Error, intenta denuevo: ")
+    caballo_usuario = int(caballo_usuario)
+
+    if caballo_usuario == 1:
+        caballo_usuario = "moneda"
+    elif caballo_usuario ==2:
+        caballo_usuario = "copa"
+    elif caballo_usuario == 3:
+        caballo_usuario = "espada"
+    else:
+        caballo_usuario = "abasto"
+
+
+    caballo_Cpu = random.choice(list(diccionario_de_barajas.keys()))
+
+    print(f"\nTu apostaste por el caballo de {caballo_usuario}\nEl cp aposto al caballo de {caballo_Cpu}")
+
+
 
     levantar = None
     while levantar != 0:
@@ -89,28 +117,47 @@ def juego_contra_cpu (diccionario_de_barajas):
                         matriz_de_juego[renglones][columnas] = "     "
                         imprimir_matriz(matriz_de_juego)
                         print(f"{llave_random} ha ganado.")
+                        if llave_random == caballo_usuario:
+                            print("\nHaz ganado la apuesta, felicidades")
+                        elif llave_random == caballo_Cpu:
+                            print("\nEl cpu ha ganado")
+                        else:
+                            print("\nEsto ha sido un empate, nadie gano")
                         levantar = 0  # Terminamos el juego
                     else:
                         # Verificación de columnas vacías
+
                         for c in range(0, 5):  # Ahora iteramos hasta la columna 4
+                                if bandera == 1:
+                                    c=+1
+
                                 contador_columna = 0
                                 for r in range(0, 4):  # Iteramos por las filas
                                     if matriz_de_juego[r][c] == "     ":
                                         contador_columna += 1
 
                                 if contador_columna == 4:
+                                    bandera=1
+                                    for rg in range(0, 4):
+                                        for cl in range(0, 5):
+                                            columnas_verficadas.append(matriz_de_juego[rg][cl])
+                                        break
+
+
                                     print(f"La columna {c} tiene 4 celdas vacías.")
                                     regresar_carta = random.choice(list(diccionario_de_barajas.keys()))
                                     print(f"\nLa carta que se regresará un espacio es {regresar_carta}")
 
                                     for rg in range(0, 4):
                                         for cl in range(0, 5):
+
                                             if matriz_de_juego[rg][cl] == regresar_carta:
-                                                matriz_de_juego[rg][cl] = "       "
+                                                matriz_de_juego[rg][cl] = "    "
                                                 matriz_de_juego[rg][cl - 1] = regresar_carta
 
                                                 imprimir_matriz(matriz_de_juego)
-                                                break
+                                    break
+
 
                         if contador_columna != 4 :
                             # Si no hay columnas vacías, se mueve la carta
@@ -121,10 +168,11 @@ def juego_contra_cpu (diccionario_de_barajas):
 
 
         if levantar != 0:
-            levantar = int(input("[1]. Para levantar otra carta"))
+            levantar = input("[1] Para levantar otra carta o [0] para terminar programa: ")
+            while not levantar.isnumeric() or int(levantar)>1:
+                levantar = input("Error ingresa denuevo: ")
 
-
-
+            levantar = int(levantar)
 
 
 
@@ -150,9 +198,9 @@ def menu_principal ()->None:
             if opcion == 0:
                 print("Salida Exitosa. Adios :)")
             if opcion == 1:
-                juego_contra_cpu(diccionario_de_barajas)
-            if opcion == 2:
                 reglas_de_juego()
+            if opcion == 2:
+                juego_contra_cpu(diccionario_de_barajas)
             if opcion == 3:
                 reglas_de_juego()
         else:
